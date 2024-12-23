@@ -11,7 +11,7 @@ export default function AddVerse() {
     async function addVerseApi(value) {
         console.log(inputRef.current.value);
 
-        const { data } = await axios.post(`http://localhost:3000/verse/addVerse`, { verse: inputRef.current.value })
+        const { data } = await axios.post(`https://verse-api-taupe.vercel.app`, { verse: inputRef.current.value })
         console.log(data);
         toast.success("Wait for Accept")
         inputRef.current.value = ""
