@@ -6,18 +6,18 @@ import toast, { Toaster } from 'react-hot-toast'
 export default function AdminPanel() {
     const [versesData, setversesData] = useState([])
     async function dataApi() {
-        const { data } = await axios.get(`http://verse-api-taupe.vercel.app/verse/notAccept`)
+        const { data } = await axios.get(`https://verse-api-taupe.vercel.app/verse/notAccept`)
         setversesData(data.verses);
     }
     async function DeleteData(id) {
-        const { data } = await axios.delete(`http://verse-api-taupe.vercel.app/verse/deleteByid`, {
+        const { data } = await axios.delete(`https://verse-api-taupe.vercel.app/verse/deleteByid`, {
             data: { id }
         })
         dataApi()
         toast.success(data.message)
     }
     async function updateData(id) {
-        const { data } = await axios.put(`http://verse-api-taupe.vercel.app/verse/UpdateByid`, { id })
+        const { data } = await axios.put(`https://verse-api-taupe.vercel.app/verse/UpdateByid`, { id })
         dataApi()
         toast.success(data.message)
     }

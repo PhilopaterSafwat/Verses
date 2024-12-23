@@ -10,7 +10,7 @@ export default function ProtectedRoute({ children }) {
         const token = localStorage.getItem("Authorization");
         const fetchUserData = async () => {
             try {
-                const { data } = await axios.get(`http://verse-api-taupe.vercel.app/user/findById`, {
+                const { data } = await axios.get(`https://verse-api-taupe.vercel.app/user/findById`, {
                     headers: { Authorization: token },
                 });
                 setUserData(data);

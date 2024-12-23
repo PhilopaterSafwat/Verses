@@ -18,7 +18,7 @@ export default function Login() {
 
 
         try {
-            let { data } = await axios.post(`http://verse-api-taupe.vercel.app/auth/login`, values)
+            let { data } = await axios.post(`https://verse-api-taupe.vercel.app/auth/login`, values)
             if (data.token) {
                 navigate("/adminpanel")
                 localStorage.setItem("Authorization", data.token)

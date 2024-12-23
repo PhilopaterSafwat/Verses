@@ -19,7 +19,7 @@ export default function Home() {
   }
   async function versesApi() {
     try {
-      const { data } = await axios.get('http://verse-api-taupe.vercel.app/verse/Accepted');
+      const { data } = await axios.get('https://verse-api-taupe.vercel.app/verse/Accepted');
       setAyat(data.verses);
       setRandwom(Math.floor(Math.random() * data.verses.length));
     } catch (err) {
