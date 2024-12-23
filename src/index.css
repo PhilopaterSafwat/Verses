@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-bg-color {
+    background-color: #1e202c;
+}
+
+.secound-bg-color {
+    background-color: #262a36;
+}
+
+.third-bg-color {
+    background-color: #463351;
+}
+.third-color {
+    color: #624574;
+}
+.third-bg-color:hover {
+    background-color: #624574;
+} 
